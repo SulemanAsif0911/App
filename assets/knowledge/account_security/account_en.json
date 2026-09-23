@@ -1,0 +1,16 @@
+{
+  "version": "2026.09.01",
+  "never_store_passwords": true,
+  "tips": [
+    "Unique passwords",
+    "Password manager",
+    "2FA",
+    "Recovery email",
+    "Recovery phone",
+    "Active sessions",
+    "Connected apps",
+    "Privacy settings",
+    "Device lock",
+    "SIM security"
+  ]
+}

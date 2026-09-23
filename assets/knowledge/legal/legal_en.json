@@ -1,0 +1,64 @@
+{
+  "version": "2026.09.01",
+  "jurisdiction": "Pakistan",
+  "last_verified": "2026-09-01",
+  "disclaimer": "This is general awareness information, not legal advice. Laws and procedures can change. Verify current requirements with official sources or qualified legal professionals.",
+  "documents": [
+    {
+      "id": "peca",
+      "title": "PECA awareness",
+      "source_name": "Pakistan legal framework (general)",
+      "source_url": "https://www.na.gov.pk",
+      "content_version": "2026.09.01",
+      "body": "Pakistan\u2019s Prevention of Electronic Crimes framework addresses certain online offences. Procedures, agencies, and definitions change. Confirm current law and reporting routes with official sources. This app does not file cases for you."
+    },
+    {
+      "id": "stalking",
+      "title": "Cyber stalking (awareness)",
+      "source_name": "General awareness",
+      "source_url": "",
+      "content_version": "2026.09.01",
+      "body": "Persistent unwanted digital contact can be a safety and legal issue. Preserve evidence. Seek qualified advice for your situation."
+    },
+    {
+      "id": "identity",
+      "title": "Identity information misuse",
+      "source_name": "General awareness",
+      "source_url": "",
+      "content_version": "2026.09.01",
+      "body": "Misuse of CNIC, photos, or account identifiers should be documented. Report through official channels when you can connect."
+    },
+    {
+      "id": "privacy",
+      "title": "Privacy-related harms",
+      "source_name": "General awareness",
+      "source_url": "",
+      "content_version": "2026.09.01",
+      "body": "Unauthorized sharing of private data or images should be preserved as evidence. Do not pay to 'take down' content without independent advice."
+    },
+    {
+      "id": "threats",
+      "title": "Online threats",
+      "source_name": "General awareness",
+      "source_url": "",
+      "content_version": "2026.09.01",
+      "body": "Credible threats to physical safety require urgent local help. The app cannot contact authorities while offline."
+    },
+    {
+      "id": "reporting",
+      "title": "Reporting processes",
+      "source_name": "General awareness",
+      "source_url": "",
+      "content_version": "2026.09.01",
+      "body": "Typical steps: preserve evidence, secure accounts, prepare a complaint, use official portals or helplines when online."
+    },
+    {
+      "id": "evidence",
+      "title": "Evidence preservation (legal awareness)",
+      "source_name": "General awareness",
+      "source_url": "",
+      "content_version": "2026.09.01",
+      "body": "Keep originals. Record hashes. Note date, time, platform, and how you obtained the file. Do not edit originals."
+    }
+  ]
+}

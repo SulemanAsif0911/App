@@ -1,0 +1,23 @@
+{
+  "version": "2026.09.01",
+  "jurisdiction": "Pakistan",
+  "language": "en",
+  "last_verified": "2026-09-01",
+  "steps": [
+    {
+      "id": "save",
+      "title": "Step 01 \u2014 Save the Evidence",
+      "body": "Preserve screenshots, screen recordings, messages, usernames, URLs, phone numbers, emails, dates, timestamps, posts, comments, threats, payment requests, account IDs, and platform names. Do not delete conversations before you have copies. Hash and encrypt copies in the Evidence Vault. Never alter original files."
+    },
+    {
+      "id": "secure",
+      "title": "Step 02 \u2014 Secure Your Accounts",
+      "body": "Change passwords on a safe device. Use unique passwords and a password manager. Enable 2FA. Review recovery email and phone. Sign out unknown sessions. Revoke unknown connected apps. Tighten privacy settings. Block and report the abuser on-platform. Lock the device. Review SIM and account recovery. This app never asks for your passwords."
+    },
+    {
+      "id": "report",
+      "title": "Step 03 \u2014 Report and Reach Help",
+      "body": "Prepare a complaint using the generator. Keep a case reference. When you have connectivity, use official portals in the system browser. Call helplines through the Android dialer \u2014 the app cannot complete a call by itself. Do not assume a report was delivered while offline."
+    }
+  ]
+}

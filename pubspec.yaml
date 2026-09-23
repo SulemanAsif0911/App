@@ -1,0 +1,52 @@
+name: cyber_hayat_pk
+description: Offline-first digital safety companion for Pakistan.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  crypto: ^3.0.5
+  encrypt: ^5.0.3
+  flutter_secure_storage: ^9.2.2
+  local_auth: ^2.3.0
+  path: ^1.9.0
+  path_provider: ^2.1.4
+  sqflite: ^2.3.3+1
+  uuid: ^4.5.1
+  intl: ^0.19.0
+  url_launcher: ^6.3.1
+  share_plus: ^10.0.2
+  image_picker: ^1.1.2
+  pdf: ^3.11.1
+  connectivity_plus: ^6.1.0
+  http: ^1.2.2
+  provider: ^6.1.2
+  shared_preferences: ^2.3.2
+  image: ^4.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  sqflite_common_ffi: ^2.3.3
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/branding/
+    - assets/knowledge/guide/
+    - assets/knowledge/harassment/
+    - assets/knowledge/evidence/
+    - assets/knowledge/account_security/
+    - assets/knowledge/legal/
+    - assets/knowledge/helplines/
+    - assets/knowledge/reporting/
+    - assets/knowledge/faq/
+    - assets/knowledge/languages/

@@ -1,0 +1,21 @@
+{
+  "version": "2026.09.01",
+  "items": [
+    {
+      "q": "Does this app work offline?",
+      "a": "Yes. Guide, assistant, checklists, vault, cases, legal pages, and helpline directory are local. Calls, portals, and sync need connectivity."
+    },
+    {
+      "q": "Did you contact the police for me?",
+      "a": "No. This app never contacts police, FIA, NCCIA, or Cyber Hayat staff by itself."
+    },
+    {
+      "q": "Should I send money to stop a leak?",
+      "a": "Do not send more money or images. Preserve the demand as evidence and seek help through official routes when you can."
+    },
+    {
+      "q": "Is this legal advice?",
+      "a": "No. It is general awareness. Laws change. Consult qualified professionals."
+    }
+  ]
+}

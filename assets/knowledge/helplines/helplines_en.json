@@ -1,0 +1,64 @@
+{
+  "version": "2026.09.01",
+  "jurisdiction": "Pakistan",
+  "language": "en",
+  "last_verified": "2026-09-01",
+  "source": "Cyber Hayat PK bundled baseline \u2014 verify before relying in an emergency",
+  "items": [
+    {
+      "id": "hl-1043",
+      "organization": "Punjab Women's Toll-Free Helpline",
+      "category": "gender-based violence",
+      "phone": "1043",
+      "website": "",
+      "availability": "Verify locally",
+      "jurisdiction": "Punjab, Pakistan",
+      "last_verified": "2026-09-01",
+      "source": "Public helpline listings (versioned)"
+    },
+    {
+      "id": "hl-1799",
+      "organization": "National Cyber Crime Investigation Agency (NCCIA)",
+      "category": "cybercrime",
+      "phone": "1799",
+      "website": "",
+      "availability": "Verify locally",
+      "jurisdiction": "Pakistan",
+      "last_verified": "2026-09-01",
+      "source": "Public listings (versioned)"
+    },
+    {
+      "id": "hl-9911",
+      "organization": "Federal Investigation Agency",
+      "category": "federal investigation",
+      "phone": "9911",
+      "website": "https://www.fia.gov.pk",
+      "availability": "Verify locally",
+      "jurisdiction": "Pakistan",
+      "last_verified": "2026-09-01",
+      "source": "Public listings (versioned)"
+    },
+    {
+      "id": "hl-drf",
+      "organization": "Digital Rights Foundation Helpline",
+      "category": "digital rights / cyber harassment",
+      "phone": "0800-39393",
+      "website": "https://digitalrightsfoundation.pk",
+      "availability": "Verify locally",
+      "jurisdiction": "Pakistan",
+      "last_verified": "2026-09-01",
+      "source": "Public listings (versioned)"
+    },
+    {
+      "id": "hl-15",
+      "organization": "Police emergency (general)",
+      "category": "emergency",
+      "phone": "15",
+      "website": "",
+      "availability": "Emergency \u2014 connectivity and local service required",
+      "jurisdiction": "Pakistan",
+      "last_verified": "2026-09-01",
+      "source": "Public emergency numbers (versioned)"
+    }
+  ]
+}

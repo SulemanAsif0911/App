@@ -1,0 +1,9 @@
+{
+  "version": "2026.09.01",
+  "language": "ur",
+  "direction": "rtl",
+  "strings": {
+    "offlineReady": "آف لائن تیار",
+    "doNotSendMoney": "مزید پیسے یا تصاویر نہ بھیجیں۔"
+  }
+}
