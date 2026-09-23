@@ -25,7 +25,7 @@
 
 # Known limitations
 
-- **Release APK was not produced in this sandbox** because Flutter’s Dart SDK and the Android SDK cannot be downloaded (TLS to Google storage / Debian mirrors fails). Source is complete. Use `flutter build apk --release` locally or the GitHub Actions workflow `.github/workflows/build-apk.yml`.
+- **Release APK:** `cyber_hayat_pk.apk` (Flutter 3.24.5, Dart 3.5, minSdk 23, targetSdk 34, version 1.0.0+1). Built on GitHub Actions and committed to this branch.
 - No production FastAPI/Postgres deployment; sync remains queued.
 - No bundled on-device LLM weights.
 - Helpline numbers are versioned baseline data — verify before emergency use.
