@@ -6,21 +6,17 @@ enum NetStatus { online, offline, syncing }
 
 class ConnectivityService extends ChangeNotifier {
   NetStatus status = NetStatus.offline;
-  StreamSubscription? _sub;
+  StreamSubscription<List<ConnectivityResult>>? _sub;
 
   void start() {
-    _sub = Connectivity().onConnectivityChanged.listen((r) {
-      final list = r is List ? r : [r];
-      final has = list.any((e) => e != ConnectivityResult.none);
-      status = has ? NetStatus.online : NetStatus.offline;
-      notifyListeners();
-    });
-    Connectivity().checkConnectivity().then((r) {
-      final list = r is List ? r : [r];
-      final has = list.any((e) => e != ConnectivityResult.none);
-      status = has ? NetStatus.online : NetStatus.offline;
-      notifyListeners();
-    });
+    _sub = Connectivity().onConnectivityChanged.listen(_apply);
+    Connectivity().checkConnectivity().then(_apply);
+  }
+
+  void _apply(List<ConnectivityResult> results) {
+    final has = results.any((e) => e != ConnectivityResult.none);
+    status = has ? NetStatus.online : NetStatus.offline;
+    notifyListeners();
   }
 
   @override

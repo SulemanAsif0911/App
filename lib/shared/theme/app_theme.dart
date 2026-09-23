@@ -32,11 +32,6 @@ class AppTheme {
         elevation: 0,
         titleTextStyle: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, letterSpacing: 1.2, color: AppColors.text),
       ),
-      cardTheme: CardTheme(
-        color: AppColors.card,
-        elevation: 0,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16), side: const BorderSide(color: AppColors.border)),
-      ),
     );
   }
 }

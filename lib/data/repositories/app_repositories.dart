@@ -9,7 +9,7 @@ class AppRepositories {
   final _uuid = const Uuid();
 
   Future<void> seedIfNeeded() async {
-    final count = SqfliteFirstInt(await db.db.rawQuery('SELECT COUNT(*) c FROM helplines'));
+    final count = firstInt(await db.db.rawQuery('SELECT COUNT(*) c FROM helplines'));
     if (count == 0) {
       final raw = await rootBundle.loadString('assets/knowledge/helplines/helplines_en.json');
       final map = jsonDecode(raw) as Map<String, dynamic>;
@@ -28,7 +28,7 @@ class AppRepositories {
         });
       }
     }
-    final kcount = SqfliteFirstInt(await db.db.rawQuery('SELECT COUNT(*) c FROM knowledge_chunks'));
+    final kcount = firstInt(await db.db.rawQuery('SELECT COUNT(*) c FROM knowledge_chunks'));
     if (kcount == 0) {
       await _indexAsset('assets/knowledge/guide/guide_en.json', 'guide');
       await _indexAsset('assets/knowledge/faq/faq_en.json', 'faq');
@@ -150,11 +150,11 @@ class AppRepositories {
 
   Future<int> pendingSync() async {
     final r = await db.db.rawQuery("SELECT COUNT(*) c FROM sync_queue WHERE status='pending'");
-    return SqfliteFirstInt(r);
+    return firstInt(r);
   }
 }
 
-int SqfliteFirstInt(List<Map<String, Object?>> r) {
+int firstInt(List<Map<String, Object?>> r) {
   if (r.isEmpty) return 0;
   final v = r.first.values.first;
   if (v is int) return v;
