@@ -4,6 +4,9 @@ on:
   push:
     branches: [main, 'arena/**']
 
+permissions:
+  contents: read
+
 jobs:
   apk:
     runs-on: ubuntu-latest
@@ -18,21 +21,21 @@ jobs:
           flutter-version: '3.24.5'
           channel: stable
       - run: flutter pub get
+      - run: flutter doctor -v
       - name: Analyze
         run: flutter analyze --no-fatal-infos
         continue-on-error: true
       - run: flutter test
       - name: Build APK
         run: |
-          set -o pipefail
-          flutter build apk --release --verbose 2>&1 | tee apk_build.log | tail -n 80
-      - name: Comment build log on failure
-        if: failure()
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          tail -c 6000 apk_build.log > /tmp/tail.log
-          gh api repos/${{ github.repository }}/commits/${{ github.sha }}/comments -f body="$(printf 'APK build failed. Tail log:\n\n```\n%s\n```' "$(cat /tmp/tail.log)")"
+          set +e
+          flutter build apk --release > apk_build.log 2>&1
+          status=$?
+          tail -n 40 apk_build.log
+          tail -n 15 apk_build.log | while IFS= read -r line; do
+            echo "::error::${line}"
+          done
+          exit $status
       - run: cp build/app/outputs/flutter-apk/app-release.apk cyber_hayat_pk.apk
       - uses: actions/upload-artifact@v4
         with:
