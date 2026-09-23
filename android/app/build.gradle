@@ -7,18 +7,17 @@ plugins {
 android {
     namespace "pk.cyberhayat.app"
     compileSdk 34
-    ndkVersion flutter.ndkVersion
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     defaultConfig {
         applicationId "pk.cyberhayat.app"
-        minSdk 21
+        minSdk 23
         targetSdk 34
         versionCode 1
         versionName "1.0.0"
@@ -32,5 +31,5 @@ android {
 }
 
 flutter {
-    source = "../.."
+    source "../.."
 }

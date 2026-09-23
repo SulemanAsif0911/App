@@ -9,6 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.24.5'
@@ -18,7 +22,17 @@ jobs:
         run: flutter analyze --no-fatal-infos
         continue-on-error: true
       - run: flutter test
-      - run: flutter build apk --release
+      - name: Build APK
+        run: |
+          set -o pipefail
+          flutter build apk --release --verbose 2>&1 | tee apk_build.log | tail -n 80
+      - name: Comment build log on failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          tail -c 6000 apk_build.log > /tmp/tail.log
+          gh api repos/${{ github.repository }}/commits/${{ github.sha }}/comments -f body="$(printf 'APK build failed. Tail log:\n\n```\n%s\n```' "$(cat /tmp/tail.log)")"
       - run: cp build/app/outputs/flutter-apk/app-release.apk cyber_hayat_pk.apk
       - uses: actions/upload-artifact@v4
         with:
