@@ -3,9 +3,11 @@ on:
   workflow_dispatch:
   push:
     branches: [main, 'arena/**']
+    paths-ignore:
+      - 'cyber_hayat_pk.apk'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   apk:
@@ -21,23 +23,18 @@ jobs:
           flutter-version: '3.24.5'
           channel: stable
       - run: flutter pub get
-      - run: flutter doctor -v
-      - name: Analyze
-        run: flutter analyze --no-fatal-infos
-        continue-on-error: true
       - run: flutter test
-      - name: Build APK
-        run: |
-          set +e
-          flutter build apk --release > apk_build.log 2>&1
-          status=$?
-          tail -n 40 apk_build.log
-          tail -n 15 apk_build.log | while IFS= read -r line; do
-            echo "::error::${line}"
-          done
-          exit $status
+      - run: flutter build apk --release
       - run: cp build/app/outputs/flutter-apk/app-release.apk cyber_hayat_pk.apk
       - uses: actions/upload-artifact@v4
         with:
           name: cyber_hayat_pk
           path: cyber_hayat_pk.apk
+      - name: Commit APK to branch
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add cyber_hayat_pk.apk
+          git diff --cached --quiet && echo "no apk change" && exit 0
+          git commit -m "Add release APK (CI)"
+          git push
