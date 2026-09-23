@@ -1,4 +1,0 @@
-#!/usr/bin/env sh
-# Placeholder wrapper — Flutter regenerates a full wrapper when the SDK is present.
-echo "Use: flutter build apk --release"
-exit 1
